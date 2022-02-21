@@ -4617,3 +4617,61 @@ readers do not read off random characters that represent icons */
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+ }
+ h1 {
+   margin: 0 0 0.25em;
+   color:black;
+ }
+ /* Thiết kẻ thẻ select */
+ select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   -ms-appearance: none;
+   appearance: none;
+   outline: 0;
+   box-shadow: none;
+   border: 0 !important;
+   background: DeepSkyBlue;
+   background-image: none;
+ }
+.select {
+   position: relative;
+   display: flex;
+   width: 20em;
+   height: 3em;
+   line-height: 3;
+   background: #fff;
+   overflow: hidden;
+   border-radius: .25em;
+ }
+ select {
+   flex: 1;
+   padding: 0 .5em;
+   color: #fff;
+   cursor: pointer;
+ }
+ /* thiết kế dấu mũi tên */
+ .select::after {
+   content: '25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: DodgerBlue;
+   cursor: pointer;
+   pointer-events: none;
+   -webkit-transition: .25s all ease;
+   -o-transition: .25s all ease;
+   transition: .25s all ease;
+   color: white;
+ }
+ /* Hiệu ứng hover */
+ .select:hover::after {
+   color: Gainsboro;
+ }
